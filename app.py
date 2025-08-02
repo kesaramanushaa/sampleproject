@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app=Flask(__name__)
 
-@app.route('/')
+@app.route('/')#create templates folder=>index.html
 def index():
-    return "Welcome to MRECW"
+    return render_template("index.html")
 
 @app.route('/home')
 def home():
